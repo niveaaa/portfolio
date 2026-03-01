@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voxel Portfolio — Explore My World</title>
+  <meta name="description"
+    content="An immersive Minecraft-style 3D portfolio. Navigate a voxel world to explore projects, skills, and experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">⛏️</div>
+      <h1 class="loading-title">VOXEL PORTFOLIO</h1>
+      <div class="loading-bar-container">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <p class="loading-tip" id="loading-tip">Generating terrain...</p>
+      <button class="enter-btn" id="enter-btn" style="display:none;">CLICK TO ENTER WORLD</button>
+    </div>
+  </div>
+
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- HUD Overlay -->
+  <div id="hud" style="display:none;">
+    <div id="crosshair">+</div>
+    <div id="minimap-container">
+      <canvas id="minimap" width="160" height="160"></canvas>
+    </div>
+    <div id="controls-hint">
+      <span>WASD / Arrows</span> Move &nbsp;|&nbsp;
+      <span>Mouse</span> Look &nbsp;|&nbsp;
+      <span>Click</span> Interact &nbsp;|&nbsp;
+      <span>ESC</span> Release
+    </div>
+    <div id="weather-toggle" title="Toggle Weather">🌧️</div>
+    <div id="fps-toggle" title="Enter First Person Mode">🎮 First Person</div>
+    <div id="time-indicator">☀️</div>
+  </div>
+
+  <!-- Section Panel Overlay -->
+  <div id="panel-overlay" style="display:none;">
+    <div id="panel">
+      <button id="panel-close">✕</button>
+      <div id="panel-content"></div>
+    </div>
+  </div>
+
+  <!-- Achievement Popup -->
+  <div id="achievement-popup" style="display:none;">
+    <div class="achievement-icon">🏆</div>
+    <div class="achievement-text">
+      <div class="achievement-title" id="achievement-title">Achievement Unlocked!</div>
+      <div class="achievement-desc" id="achievement-desc"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Fallback Container -->
+  <div id="mobile-fallback" style="display:none;"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
